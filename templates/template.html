@@ -3,5 +3,24 @@
 <body>
     <div class="container">
         <h1>{{name}}</h1>
+
+        <table >
+            <thead>
+                <tr>
+                    {% for passenger in passengers.header %}
+                    <th>{{ passenger }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for passenger_row in passengers.rows %}
+                <tr>
+                    {% for column in passenger_row %}
+                    <td>{{ column }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
        </body>
 </html>
